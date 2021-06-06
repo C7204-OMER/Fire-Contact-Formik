@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Form className="form" info={info} setInfo={setInfo} />
-      <Contact />
+      <Contact className="contacts" />
     </div>
   );
 }
