@@ -1,12 +1,16 @@
 import React from "react";
 import { Button, Form, Grid, Segment } from "semantic-ui-react";
+import { options } from "../../utils/contants";
 
-const FormComponent = ({ info }) => {
-  const handleFormSubmit = () => {
-    console.log("handle");
+const FormComponent = ({ info, setInfo, handleFormSubmit }) => {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setInfo({ ...info, [name]: value });
   };
-  const handleInputChange = () => {
-    console.log("HIC");
+
+  const handleOptionChange = (e, result) => {
+    const { name, value } = result;
+    setInfo({ ...info, [name]: value.toUpperCase() });
   };
   return (
     <Grid textAlign="center" verticalAlign="middle">
@@ -34,7 +38,8 @@ const FormComponent = ({ info }) => {
             name="username"
             icon="user"
             iconPosition="left"
-            placeholder="name"
+            placeholder="Name"
+            type="text"
             value={info.username}
             onChange={handleInputChange}
             required
@@ -52,14 +57,17 @@ const FormComponent = ({ info }) => {
           />
           <Form.Dropdown
             options={options}
-            onChange={handleOptionsChange}
+            onChange={handleOptionChange}
             placeholder="Gender"
-            name="Gender"
+            name="gender"
             fluid
             selection
             value={info.gender.toLowerCase()}
             required
           />
+          <Button color="teal" fluid size="large">
+            Add
+          </Button>
         </Segment>
       </Grid.Column>
     </Grid>
