@@ -1,16 +1,28 @@
 import { useState } from "react";
+import Contacts from "./components/contacts/Contacts";
 import Form from "./components/form/Form";
-import Contact from "./components/contacts/Contacts";
-import { addInfo } from "./utils/functions";
+import { addInfo, updateHandler } from "./utils/functions";
+import { ToastContainer } from "react-toastify";
 
 const initialValues = { username: "", phoneNumber: "", gender: "NO INFO!" };
+
 function App() {
   const [info, setInfo] = useState(initialValues);
 
-  const handleFormSubmit = () => {
-    console.log("HFS");
-    addInfo(info);
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    if (info.id) {
+      updateHandler(info);
+    } else {
+      addInfo(info);
+    }
+    setInfo(initialValues);
   };
+
+  const updateFormHandler = (id, username, phoneNumber, gender) => {
+    setInfo({ id, username, phoneNumber, gender });
+  };
+
   return (
     <div className="App">
       <Form
@@ -19,7 +31,8 @@ function App() {
         setInfo={setInfo}
         handleFormSubmit={handleFormSubmit}
       />
-      <Contact className="contacts" />
+      <Contacts className="contacts" updateFormHandler={updateFormHandler} />
+      <ToastContainer />
     </div>
   );
 }
