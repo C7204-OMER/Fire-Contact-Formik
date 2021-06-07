@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Fire-Contact-Formik/static/css/main.d9a5e1b1.chunk.css",
+    "main.js": "/Fire-Contact-Formik/static/js/main.55645707.chunk.js",
+    "main.js.map": "/Fire-Contact-Formik/static/js/main.55645707.chunk.js.map",
+    "runtime-main.js": "/Fire-Contact-Formik/static/js/runtime-main.51eaead6.js",
+    "runtime-main.js.map": "/Fire-Contact-Formik/static/js/runtime-main.51eaead6.js.map",
+    "static/css/2.af64c370.chunk.css": "/Fire-Contact-Formik/static/css/2.af64c370.chunk.css",
+    "static/js/2.60a634aa.chunk.js": "/Fire-Contact-Formik/static/js/2.60a634aa.chunk.js",
+    "static/js/2.60a634aa.chunk.js.map": "/Fire-Contact-Formik/static/js/2.60a634aa.chunk.js.map",
+    "index.html": "/Fire-Contact-Formik/index.html",
+    "static/css/2.af64c370.chunk.css.map": "/Fire-Contact-Formik/static/css/2.af64c370.chunk.css.map",
+    "static/css/main.d9a5e1b1.chunk.css.map": "/Fire-Contact-Formik/static/css/main.d9a5e1b1.chunk.css.map",
+    "static/js/2.60a634aa.chunk.js.LICENSE.txt": "/Fire-Contact-Formik/static/js/2.60a634aa.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/Fire-Contact-Formik/static/media/outline-icons.ddae9b1b.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51eaead6.js",
+    "static/css/2.af64c370.chunk.css",
+    "static/js/2.60a634aa.chunk.js",
+    "static/css/main.d9a5e1b1.chunk.css",
+    "static/js/main.55645707.chunk.js"
+  ]
+}
